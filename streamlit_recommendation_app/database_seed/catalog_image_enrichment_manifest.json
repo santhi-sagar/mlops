@@ -1,4 +1,4 @@
-{
+﻿{
   "purpose": "Exact-ASIN image enrichment for newly enriched catalog records",
   "validated_at": "2026-09-30",
   "validation": "Each image URL returned an HTTP 206 response with content-type image/jpeg when fetched with a byte-range request. Source pages or archives identified the exact ASIN, SKU, or exact manufacturer model.",
@@ -33,7 +33,7 @@
     "B003ES5ZSW": "https://m.media-amazon.com/images/I/811PyLh3cfL._AC_SL1500_.jpg",
     "B000067RT6": "https://m.media-amazon.com/images/I/51KCd0MkYPL._SL1280_.jpg",
     "B002JQNXZC": "https://m.media-amazon.com/images/I/61W2J58lJzL._AC_SX466_.jpg",
-    "B003ES5ZUU": "https://m.media-amazon.com/images/I/81LuFV9VwhL._SL1500_.jpg",
+    "B003ES5ZUU": "https://images-na.ssl-images-amazon.com/images/I/81LuFV9VwhL._SX522_.jpg",
     "B0002L5R78": "https://images-na.ssl-images-amazon.com/images/I/41is%2B997KUL._SL500_AA280_.jpg",
     "B00DR0PDNE": "https://ecx.images-amazon.com/images/I/811nvG%2BLgML._SY550_.jpg"
   },
@@ -56,3 +56,4 @@
     "B00DR0PDNE": "https://developers.google.com/workspace/gmail/markup/reference/order"
   }
 }
+
