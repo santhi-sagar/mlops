@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "product_id": "B002V88HFE",
     "product_name": "Eneloop SEC-CSPACER4PK C Size Spacers (Disc by Manufacturer - New Version Available from Panasonic)",
@@ -101,7 +101,7 @@
   {
     "product_id": "B00829TIA4",
     "product_name": "Seagate Backup Plus 500 GB FireWire 800/USB 2.0 Portable External Hard Drive for Mac STBW500100",
-    "category": "Electronics › Computers & Accessories › Data Storage › External Hard Drives",
+    "category": "Electronics â€º Computers & Accessories â€º Data Storage â€º External Hard Drives",
     "description": "500 GB portable external hard drive formatted for Mac out of the box, compatible with Time Machine, featuring FireWire 800 and USB 2.0 interfaces, along with social network backup and sharing capabilities.",
     "image_url": "https://m.media-amazon.com/images/I/517nUtAmVvL._AC_SX466_.jpg",
     "product_url": "https://www.amazon.com/dp/B00829TIA4",
@@ -189,7 +189,7 @@
   {
     "product_id": "B0052SCU8U",
     "product_name": "Amazon Basics High-Speed HDMI Cable 2-Pack - 6.5 Feet (2 Meters) Supports Ethernet, 3D, 4K and Audio Return",
-    "category": "Electronics › Television & Video › Accessories › Cables › HDMI Cables",
+    "category": "Electronics â€º Television & Video â€º Accessories â€º Cables â€º HDMI Cables",
     "description": "Connects to HDMI-enabled devices such as Blu-ray players, Apple TV, consoles, computers, and displays. Supports Ethernet, 3D, 4K video, and Audio Return Channel (ARC) with gold-plated, corrosion-resistant connectors.",
     "image_url": "https://m.media-amazon.com/images/I/71KvJ8TFbaL._AC_SX466_.jpg",
     "product_url": "https://www.amazon.com/dp/B0052SCU8U",
@@ -334,7 +334,7 @@
     "product_name": "AmazonBasics High-Speed HDMI Cable with Ethernet Braided 2 m / 6.5 Feet",
     "category": "HDMI Cables",
     "description": "High-speed HDMI cable with Ethernet, braided construction, and a 2 m / 6.5-foot length.",
-    "image_url": "https://m.media-amazon.com/images/I/81LuFV9VwhL._SL1500_.jpg",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/81LuFV9VwhL._SX522_.jpg",
     "product_url": "https://www.amazon.in/dp/B003ES5ZUU",
     "brand": "AmazonBasics",
     "price": "",
@@ -355,7 +355,7 @@
     "product_id": "B00DR0PDNE",
     "product_name": "Google Chromecast (H2G2-42)",
     "category": "Streaming Media Players",
-    "description": "Google Chromecast (H2G2-42) streaming device. A public device reference lists dimensions of 72 mm × 35 mm × 12 mm and weight of 34 g.",
+    "description": "Google Chromecast (H2G2-42) streaming device. A public device reference lists dimensions of 72 mm Ã— 35 mm Ã— 12 mm and weight of 34 g.",
     "image_url": "https://ecx.images-amazon.com/images/I/811nvG%2BLgML._SY550_.jpg",
     "product_url": "https://www.amazon.com/dp/B00DR0PDNE",
     "brand": "Google",
@@ -363,3 +363,4 @@
     "metadata_source": "Public indexed product reference (exact ASIN)"
   }
 ]
+
