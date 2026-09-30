@@ -1,0 +1,47 @@
+{
+  "purpose": "Exact-ASIN image enrichment for newly enriched catalog records",
+  "validated_at": "2026-09-30",
+  "validation": "Each image URL returned HTTP 206 with content-type image/jpeg when fetched with a byte-range request; source pages identified the exact ASIN or exact model/SKU.",
+  "verified_images": {
+    "B000VX6XL6": "https://m.media-amazon.com/images/I/518gSWTGlyL._AC_SL1256_.jpg",
+    "B00483WRZ6": "https://m.media-amazon.com/images/I/81eKKNHXJJL._AC_SL1500_.jpg",
+    "B008JJLW4M": "https://m.media-amazon.com/images/I/71BVVChsu3L._AC_SL1500_.jpg",
+    "B004W2JKWG": "https://m.media-amazon.com/images/I/71pwJkM59rL._AC_SL1000_.jpg",
+    "B00AJHDZSI": "https://m.media-amazon.com/images/I/51UaCs2La1L._AC_SL1024_.jpg",
+    "B008H9BXMK": "https://m.media-amazon.com/images/I/71AzT3o5cSL._AC_SL1500_.jpg",
+    "B002VPE1WK": "https://m.media-amazon.com/images/I/81frCPjJrSL._AC_SL1500_.jpg",
+    "B004GCJEZU": "https://m.media-amazon.com/images/I/71mQSKOD0gL._AC_SL1500_.jpg",
+    "B004CLYEDC": "https://m.media-amazon.com/images/I/61QfUam4iiL._AC_SL1500_.jpg",
+    "B000067RT6": "https://m.media-amazon.com/images/I/51KCd0MkYPL._SL1280_.jpg",
+    "B003ES5ZSW": "https://m.media-amazon.com/images/I/811PyLh3cfL._AC_SL1500_.jpg",
+    "B00DR0PDNE": "https://ecx.images-amazon.com/images/I/811nvG%2BLgML._SY550_.jpg"
+  },
+  "unresolved": [
+    {
+      "product_id": "B0041Q38NU",
+      "reason": "Public page resolved to B0041Q38SA / conflicting capacity-variant evidence; image withheld to avoid attaching a different ASIN."
+    },
+    {
+      "product_id": "B003ES5ZUU",
+      "reason": "Search and archive sources identified related AmazonBasics HDMI variants but no retrievable image tied unambiguously to this exact ASIN."
+    },
+    {
+      "product_id": "B0002L5R78",
+      "reason": "Search sources identified generic 2m HDMI listings, but no retrievable image tied unambiguously to this exact ASIN."
+    }
+  ],
+  "source_pages": {
+    "B000VX6XL6": "https://www.amazon.com/dp/B000VX6XL6",
+    "B00483WRZ6": "https://www.amazon.com/dp/B00483WRZ6",
+    "B008JJLW4M": "https://www.amazon.com/dp/B008JJLW4M",
+    "B004W2JKWG": "https://www.amazon.com/dp/B004W2JKWG",
+    "B00AJHDZSI": "https://www.amazon.com/dp/B00AJHDZSI",
+    "B008H9BXMK": "https://www.amazon.com/dp/B008H9BXMK",
+    "B002VPE1WK": "https://www.amazon.com/dp/B002VPE1WK",
+    "B004GCJEZU": "https://www.amazon.com/dp/B004GCJEZU",
+    "B004CLYEDC": "https://www.amazon.com/dp/B004CLYEDC",
+    "B000067RT6": "https://www.amazon.com/dp/B000067RT6",
+    "B003ES5ZSW": "https://www.amazon.com/dp/B003ES5ZSW",
+    "B00DR0PDNE": "https://developers.google.com/workspace/gmail/markup/reference/order"
+  }
+}
