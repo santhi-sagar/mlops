@@ -328,5 +328,38 @@
     "brand": "Vantec",
     "price": "$29.99",
     "metadata_source": "Amazon public product page metadata"
+  },
+  {
+    "product_id": "B003ES5ZUU",
+    "product_name": "AmazonBasics High-Speed HDMI Cable with Ethernet Braided 2 m / 6.5 Feet",
+    "category": "HDMI Cables",
+    "description": "High-speed HDMI cable with Ethernet, braided construction, and a 2 m / 6.5-foot length.",
+    "image_url": "",
+    "product_url": "https://www.amazon.com/dp/B003ES5ZUU",
+    "brand": "AmazonBasics",
+    "price": "",
+    "metadata_source": "Public indexed product reference (exact ASIN)"
+  },
+  {
+    "product_id": "B0002L5R78",
+    "product_name": "HDMI Cable 2M 6 Feet (1080P)",
+    "category": "HDMI Cables",
+    "description": "2 m / 6-foot HDMI cable referenced by public pages as a 1080P HDMI cable.",
+    "image_url": "",
+    "product_url": "https://www.amazon.com/dp/B0002L5R78",
+    "brand": "",
+    "price": "",
+    "metadata_source": "Public indexed product references (exact ASIN)"
+  },
+  {
+    "product_id": "B00DR0PDNE",
+    "product_name": "Google Chromecast (H2G2-42)",
+    "category": "Streaming Media Players",
+    "description": "Google Chromecast (H2G2-42) streaming device. A public device reference lists dimensions of 72 mm × 35 mm × 12 mm and weight of 34 g.",
+    "image_url": "",
+    "product_url": "https://www.amazon.com/dp/B00DR0PDNE",
+    "brand": "Google",
+    "price": "",
+    "metadata_source": "Public indexed product reference (exact ASIN)"
   }
 ]
