@@ -1,12 +1,14 @@
 # Database-Backed Cluster-Aware Product Recommendations
 
-This Streamlit app serves precomputed cluster-aware recommendations from a database.
+This Streamlit app serves precomputed cluster-aware recommendations from Supabase PostgreSQL and enriches each result with product catalog information.
 
 ## Recommendation behavior
 
 - Known user: looks up the user's KMeans cluster and queries recommendations stored for that user.
 - Unknown user: queries `popular_recommendations` and labels every result `Global popularity fallback`.
 - Every result includes `source_cluster`, `source_method`, cluster rating support, and recommendation score.
+- Each result is joined by `product_id` to `product_catalog` and can display product name, category, brand, price, description, image, and product link.
+- If public metadata is unavailable for a product, the app shows an explicit `Fallback product ID record` instead of inventing product facts.
 
 ## Database architecture
 
@@ -15,8 +17,11 @@ The production path is Supabase PostgreSQL using the REST API. The schema contai
 - `user_profiles`: user-to-cluster assignments and rating history counts.
 - `recommendations`: ranked recommendations for known users.
 - `popular_recommendations`: cold-start fallback recommendations.
+- `product_catalog`: product names, categories, descriptions, images, links, brand, and price metadata.
 - `user_ratings`: historical interactions used by the training pipeline.
 - `model_metadata`: model version and evaluation metrics.
+
+The catalog was enriched from the public Amazon Electronics metadata archive for product IDs present in the training sample. Matching metadata is stored with source attribution; unmatched IDs have explicit fallback records so the application remains stable.
 
 A read-only Row Level Security policy is enabled for the app tables. Data loading and retraining must use a protected service-role process, never a public app key.
 
@@ -51,9 +56,9 @@ SUPABASE_URL = "https://YOUR_PROJECT_REF.supabase.co"
 SUPABASE_ANON_KEY = "YOUR_PUBLISHABLE_OR_ANON_KEY"
 ```
 
-6. Deploy.
+6. Deploy or wait for the existing app to rebuild after a new commit.
 
-The app can start with the SQLite fallback, but adding the Supabase secrets makes the deployed app query the hosted PostgreSQL database.
+The deployed app uses the hosted database when these secrets are configured. The public app key is read-only through Supabase RLS; catalog loading and model retraining remain administrative processes outside Streamlit.
 
 ## Rebuilding the database
 
@@ -61,5 +66,6 @@ The app can start with the SQLite fallback, but adding the Supabase secrets make
 
 ## Validation examples
 
-- Known user: `A108X1JFG00VOC` should show a KMeans cluster source.
-- Unknown user: `UNKNOWN_USER` should show `Global popularity fallback`.
+- Known user: `A108X1JFG00VOC` should show a KMeans cluster source and product metadata cards.
+- Unknown user: `UNKNOWN_USER` should show `Global popularity fallback` and product metadata cards.
+- A recommendation table row should include both the original product ID and its resolved catalog name/category.
