@@ -27,6 +27,20 @@ create table if not exists public.popular_recommendations (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.product_catalog (
+  product_id text primary key,
+  product_name text not null,
+  category text,
+  description text,
+  image_url text,
+  product_url text,
+  brand text,
+  price text,
+  metadata_source text not null default 'Amazon Electronics metadata',
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
 create table if not exists public.user_ratings (
   user_id text not null references public.user_profiles(user_id) on delete cascade,
   product_id text not null,
@@ -44,6 +58,7 @@ create table if not exists public.model_metadata (
 alter table public.user_profiles enable row level security;
 alter table public.recommendations enable row level security;
 alter table public.popular_recommendations enable row level security;
+alter table public.product_catalog enable row level security;
 alter table public.user_ratings enable row level security;
 alter table public.model_metadata enable row level security;
 
@@ -51,5 +66,6 @@ alter table public.model_metadata enable row level security;
 create policy public_read_user_profiles on public.user_profiles for select to anon, authenticated using (true);
 create policy public_read_recommendations on public.recommendations for select to anon, authenticated using (true);
 create policy public_read_popular_recommendations on public.popular_recommendations for select to anon, authenticated using (true);
+create policy public_read_product_catalog on public.product_catalog for select to anon, authenticated using (true);
 create policy public_read_user_ratings on public.user_ratings for select to anon, authenticated using (true);
 create policy public_read_model_metadata on public.model_metadata for select to anon, authenticated using (true);
