@@ -278,6 +278,20 @@ def enrich_recommendations(
     return enriched[OUTPUT_COLUMNS], catalog_source
 
 
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_product_image(image_url: str) -> bytes:
+    response = requests.get(
+        image_url,
+        headers={"User-Agent": "Mozilla/5.0 (catalog image loader)"},
+        timeout=15,
+    )
+    response.raise_for_status()
+    content_type = response.headers.get("content-type", "").lower()
+    if not content_type.startswith("image/"):
+        raise ValueError(f"Catalog image URL returned {content_type or 'unknown content type'}.")
+    return response.content
+
+
 def render_product_cards(recommendations: pd.DataFrame) -> None:
     st.subheader("Product details")
     for start in range(0, len(recommendations), 2):
@@ -287,7 +301,7 @@ def render_product_cards(recommendations: pd.DataFrame) -> None:
                 image_url = str(row.get("image_url", ""))
                 if image_url:
                     try:
-                        st.image(image_url, width=180)
+                        st.image(load_product_image(image_url), width=180)
                     except Exception:
                         st.caption("Product image could not be loaded.")
                 st.markdown(f"**#{int(row['rank'])} — {row['product_name']}**")
