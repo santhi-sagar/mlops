@@ -23,7 +23,7 @@ The production path is Supabase PostgreSQL using the REST API. The schema contai
 
 The catalog was enriched from the public Amazon Electronics metadata archive for product IDs present in the training sample. Matching metadata is stored with source attribution; unmatched IDs have explicit fallback records so the application remains stable.
 
-On 2026-09-30, an additional 30 fallback ASINs were verified against their public Amazon product pages and loaded into Supabase with the source label `Amazon public product page metadata`. Eighteen of these records include image URLs that returned valid JPEG content during validation. The reproducible upload payload is stored in `database_seed/catalog_enrichment_public.json`. Ten ASINs returned unavailable or 404 pages and remain explicit fallback records rather than receiving invented metadata.
+On 2026-09-30, an additional 33 fallback ASINs were verified against their public Amazon product pages and loaded into Supabase with the source label `Amazon public product page metadata`. Eighteen of these records include image URLs that returned valid JPEG content during validation. The reproducible upload payload is stored in `database_seed/catalog_enrichment_public.json`. Seven ASINs returned unavailable or 404 pages and remain explicit fallback records rather than receiving invented metadata.
 
 A read-only Row Level Security policy is enabled for the app tables. Data loading and retraining must use a protected service-role process, never a public app key.
 
