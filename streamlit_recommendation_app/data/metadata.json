@@ -1,0 +1,66 @@
+{
+  "raw_rows": 7824481,
+  "exact_duplicates": 0,
+  "cleaned_rows": 7824481,
+  "all_users": 4201696,
+  "all_products": 476001,
+  "sampled_active_users": 1000,
+  "minimum_user_ratings": 20,
+  "train_users": 1000,
+  "train_products": 20880,
+  "train_interactions": 33253,
+  "candidate_test_interactions": 1000,
+  "evaluable_test_interactions": 446,
+  "cold_start_test_interactions": 554,
+  "matrix_sparsity": 0.9984074233716476,
+  "model": "TruncatedSVD user representation + KMeans cluster recommender",
+  "cluster_count": 8,
+  "random_state": 42,
+  "results": [
+    {
+      "model": "Popularity baseline",
+      "precision_at_10": 0.0033632286995515697,
+      "recall_at_10": 0.033632286995515695,
+      "hit_rate_at_10": 0.033632286995515695,
+      "map_at_10": 0.013976083707025409,
+      "catalog_coverage_at_10": 0.0006704980842911877,
+      "evaluated_users": 446
+    },
+    {
+      "model": "User-based collaborative filtering",
+      "precision_at_10": 0.0011210762331838565,
+      "recall_at_10": 0.011210762331838564,
+      "hit_rate_at_10": 0.011210762331838564,
+      "map_at_10": 0.0026371983771086905,
+      "catalog_coverage_at_10": 0.08127394636015325,
+      "evaluated_users": 446
+    },
+    {
+      "model": "Item-based collaborative filtering (SVD)",
+      "precision_at_10": 0.0002242152466367713,
+      "recall_at_10": 0.002242152466367713,
+      "hit_rate_at_10": 0.002242152466367713,
+      "map_at_10": 0.0011210762331838565,
+      "catalog_coverage_at_10": 0.17466475095785441,
+      "evaluated_users": 446
+    },
+    {
+      "model": "KMeans cluster recommender",
+      "precision_at_10": 0.002242152466367713,
+      "recall_at_10": 0.02242152466367713,
+      "hit_rate_at_10": 0.02242152466367713,
+      "map_at_10": 0.011434977578475338,
+      "catalog_coverage_at_10": 0.0006704980842911877,
+      "evaluated_users": 446
+    },
+    {
+      "model": "MiniBatchKMeans cluster recommender",
+      "precision_at_10": 0.001569506726457399,
+      "recall_at_10": 0.01569506726457399,
+      "hit_rate_at_10": 0.01569506726457399,
+      "map_at_10": 0.007295892946117161,
+      "catalog_coverage_at_10": 0.002442528735632184,
+      "evaluated_users": 446
+    }
+  ]
+}
