@@ -20,7 +20,7 @@ The production path is Supabase PostgreSQL using the REST API. The schema contai
 
 A read-only Row Level Security policy is enabled for the app tables. Data loading and retraining must use a protected service-role process, never a public app key.
 
-The repository also contains `data/recommendations.db`, a SQLite fallback that makes the app runnable locally without secrets. The app automatically uses it if Supabase secrets are missing or temporarily unavailable.
+The local working copy also contains `data/recommendations.db`, a SQLite fallback that makes the app runnable locally without secrets. The public Streamlit deployment is configured to use Supabase PostgreSQL; the app can automatically use SQLite when that file is available and Supabase is missing or temporarily unavailable.
 
 ## Run locally
 
